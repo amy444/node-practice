@@ -42,6 +42,8 @@ var server =http.createServer(function(req, res){
 server.listen(8092);
 */
 
+
+/*
 var express=require('express');
 var http=require('http');
 var fs=require('fs');
@@ -68,4 +70,21 @@ app.get('/tasks', function(req, res){
 
 server.listen(3000, function(){
     console.log('Server is listening at 3000');
+});
+*/
+
+const express=require('express');
+const app= express();
+
+app.get('/', (req, res)=>{
+    res.send("hello wordl");
+});
+
+app.post('/', (req, res)=>{
+    res.send("POST - Hello with post");
+});
+
+app.listen("3000", ()=>{
+console.log("Server satrted")
+
 });
