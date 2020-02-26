@@ -4,12 +4,12 @@ var events=require('events');
 var eventEmitter=new events.EventEmitter();
 
 var server=http.createServer(function(req, res){
-    eventEmitter.emit('amit requested'); // event trigger
+    eventEmitter.emit('someone requested', 'TEST'); // event trigger
     res.end("server works");
 });
 
-eventEmitter.on('amit requested', function(){
-    console.log('request has been done on server')
+eventEmitter.on('someone requested', function(data){
+    console.log('request has been done on server', data);
 }); //event listener 
 
 server.listen(3000, 'localhost', function(){
