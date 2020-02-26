@@ -76,12 +76,14 @@ server.listen(3000, function(){
 const express=require('express');
 const app= express();
 
+//get
 app.get('/', (req, res)=>{
-    res.send("hello wordl");
+    res.send("With GET");
 });
 
+//post 
 app.post('/', (req, res)=>{
-    res.send("POST - Hello with post");
+    res.send("POST - Hello wit");
 });
 
 app.listen("3000", ()=>{
