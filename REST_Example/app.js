@@ -28,17 +28,17 @@ app.post('/people', (req, res)=>{
 app.put('/people', (req, res)=>{
     if(req.body && req.body.name)
     {
-        people.people.push({name: req.body.name}); //we're pushing a new object with a key called name and the name is = to req.body.names
+        people.people.push({name: req.body.name}); //we're updating a new object with a key called name and the name is = to req.body.names
     }
     console.log(req.body.name);
     res.json(people);
     res.end();
 });
 
-app.delete('/people', (req, res)=>{
+app.delete('/people', (req, res)=>{ 
     if(req.body && req.body.name)
     {
-        people.people.push({name: req.body.name}); //we're pushing a new object with a key called name and the name is = to req.body.names
+        people.people.push({name: req.body.name}); //we're deleting a new object with a key called name and the name is = to req.body.names
     }
     console.log(req.body.name);
     res.json(people);
